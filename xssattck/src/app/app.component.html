@@ -1,0 +1,29 @@
+<div class="page-container">
+  <div class="cat-container">
+    <img class="cat" src="./../assets/cat.png" />
+  </div>
+  <div class="comments-input-container">
+    <textarea type="text" #commentInput></textarea>
+    <button (click)="onSubmit(commentInput.value)">Submit</button>
+  </div>
+
+  <a
+    href="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet"
+    >Get Some XSS Payloads Here</a
+  >
+  <div class="comments-container">
+    <label>I'm sanitized</label>
+    <div class="comment" *ngFor="let comment of comments">
+      {{ comment }}
+    </div>
+    <br />
+
+    <!-- <label>Inner HTML? Uh.. Oh..</label>
+    <div *ngFor="let comment of comments" [innerHtml]="comment"></div>
+    <br />
+
+    <label>Ok, now we're cooking</label>
+    <div #thisIsMadness></div>
+  </div> -->
+  </div>
+</div>
